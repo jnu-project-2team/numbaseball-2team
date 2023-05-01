@@ -7,6 +7,9 @@ def check_answer(user_ans, sol):
         if user_ans[i] == sol[i]:
             strike_count += 1
             i += 1
+        elif user_ans[i] in sol:
+            ball_count += 1
+            i += 1
 
     return strike_count, ball_count
 
