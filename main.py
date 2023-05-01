@@ -5,6 +5,7 @@ print("숫자게임을 시작합니다."
       "진행할 숫자의 길이를 입력하세요. (1~9)"
       "입력 : ", end='')
 
+length = 0
 while True:
     length = int(input())
     digit = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -15,6 +16,6 @@ while True:
     else:
         break
 
-sol_ans = get_rand_num(4)
+sol_ans = get_rand_num(length)
 
 try_answer(sol_ans)
