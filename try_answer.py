@@ -1,3 +1,5 @@
+from is_available import *
+
 def try_answer(sol_ans):
     sol_len = len(sol_ans)
     count = 0
