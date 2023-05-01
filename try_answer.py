@@ -1,4 +1,5 @@
 from is_available import *
+from check_answer import *
 
 def try_answer(sol_ans):
     sol_len = len(sol_ans)
@@ -16,7 +17,9 @@ def try_answer(sol_ans):
             error_code = is_available(user_ans, sol_len)
 
             # 유효성 검사
-            if error_code == 1:
+            if error_code == 0:
+                pass
+            elif error_code == 1:
                 print(f"{sol_len} 길이의 숫자를 입력하세요.")
             elif error_code == 2:
                 print("입력에 중복된 숫자가 포함되어 있습니다.")
