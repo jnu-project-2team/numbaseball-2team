@@ -1,0 +1,11 @@
+def try_answer(sol_ans):
+    sol_len = len(sol_ans)
+    count = 0
+
+    while True:
+        count += 1
+
+        print(f"#{count:02} : ", end='')
+
+        # 사용자입력
+        user_ans = input()
