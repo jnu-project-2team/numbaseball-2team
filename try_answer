@@ -23,3 +23,15 @@ def try_answer(sol_ans):
             else:
                 print("유효성 검사 에러 발생")
                 exit()
+
+        # 결과 계산
+        s, b = check_answer(user_ans, sol_ans)
+        
+        # 결과 출력
+        if s == sol_len:
+            print("정답입니다.")
+            break
+        else:
+            print(f"  {s}S {b}B")
+            
+    return
