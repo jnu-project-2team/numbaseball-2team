@@ -10,6 +10,8 @@ def check_answer(user_ans, sol):
         elif user_ans[i] in sol:
             ball_count += 1
             i += 1
+        else:
+            i += 1
 
     return strike_count, ball_count
 
