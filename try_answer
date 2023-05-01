@@ -8,4 +8,18 @@ def try_answer(sol_ans):
         print(f"#{count:02} : ", end='')
 
         # 사용자입력
-        user_ans = input()
+        error_code = -1
+        while error_code != 0:
+            user_ans = input()
+            error_code = is_available(user_ans, sol_len)
+
+            # 유효성 검사
+            if error_code == 1:
+                print(f"{sol_len} 길이의 숫자를 입력하세요.")
+            elif error_code == 2:
+                print("입력에 중복된 숫자가 포함되어 있습니다.")
+            elif error_code == 3:
+                print("입력에 숫자가 아닌 문자가 포함되어 있습니다.")
+            else:
+                print("유효성 검사 에러 발생")
+                exit()
